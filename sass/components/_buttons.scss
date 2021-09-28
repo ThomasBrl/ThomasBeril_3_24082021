@@ -1,0 +1,40 @@
+.btn {
+    background: $color-shading;
+    border: none;
+    border-radius : 30px;
+    width: 200px;
+    height: 50px;
+    color: white;
+    font-weight: 700;
+    margin: 30px 0 55px 0;
+    cursor: pointer;
+    line-height: 50px;
+    text-align: center;
+    &:hover, &:active {
+            background: linear-gradient(175deg, lighten($color-secondary, 5), lighten($color-primary,5));
+            box-shadow: 0px 0px 10px 5px darken($bg-grey,15);
+    }
+}
+
+.btn-alt {
+    @include button--alt ($bg-grey, 25px, 85%);
+    @include media (576px) {
+            max-width: 300px;
+    }
+}
+
+.btn-alt__white {
+    @include button--alt ($bg-white, 15px, 90%);
+    @media (min-width: 320px) and (max-width:575px) {
+            max-width: 300px;
+    }
+    @media (min-width: 576px) and (max-width:991px) {
+            width: 350px;
+    }
+    @include media (992px) {
+            width: 300px;
+    }
+    @include media (1200px) {
+            width: 350px;
+    }
+}

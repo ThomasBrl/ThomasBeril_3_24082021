@@ -1,0 +1,123 @@
+.menu {
+    padding: 10px 0;
+    background-color: $bg-grey;
+    border-radius: 33px 33px 0 0;
+    margin: -30px 0 0 0;
+    position: relative;
+    &--container {
+        @include media (992px) {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+    }
+    &--title {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        .fa-heart {
+            margin: 12px 0 0 0;
+            padding: 0;
+            &.icon--full {
+                position: relative;
+                padding-top: 2px;
+
+            }
+            &.icon--empty {
+                padding: 2px 0 0 1px;
+            }
+        }
+    }
+
+    h1 {
+        font-family: Shrikhand;
+        font-size: 1.5em;
+        padding-right: 20px;
+    }
+
+    h2 {
+        font-weight: 300;
+        font-size: 0.9em;
+        border-bottom: solid $color-tertiary;
+        width: 40px;
+        padding: 0 0 5px 0;
+        @include media (576px) {
+            margin: 50px auto 30px auto;
+        }
+        @include media (992px) {
+            margin : 50px auto 30px 0;
+        }
+    }
+}
+
+.btn-alt__white {
+    justify-content: space-between;
+    overflow: hidden;
+    &:hover, &:active {
+        .menu--check {
+            margin-right: 0px;
+            width: 60px;
+            i {
+                transform: rotate(360deg);
+            }
+        }
+        .menu--content {
+            width: 150px;
+        }  
+    }
+}
+
+.menu--check {
+    background-color: $color-tertiary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    padding: 0 13px;
+    margin-right: -80px;
+    i {
+        color: #ffffff;
+        transition: transform 0.4s ease-in;
+        transition-delay: 0.1s;
+    }
+    transition: all 0.6s ease-in-out;
+}
+
+.menu--txt {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.menu--content {
+    overflow: hidden;
+    margin: 15px 10px;
+    flex:1;
+    width: 221px;
+    transition: width 0.4s ease-in-out;
+    h3 {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-weight: 500;
+        font-size: 1em;
+        padding-bottom: 3px;
+    }
+    p {
+        margin: 0;    
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-weight: 300;
+        font-size: 0.9em;
+    }
+}
+
+.menu--price {
+    font-weight: 700;
+    margin: 35px 15px 15px 0;
+}

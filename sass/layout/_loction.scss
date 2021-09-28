@@ -1,0 +1,20 @@
+.location {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $bg-grey-dark;
+    height: 65px;
+    width: 100%;
+    input {
+        margin: auto;
+        background-color: $bg-grey-dark;
+        border: none;
+        height: 40%;
+        width: 150px;
+        font-size: 1.1em;
+    }
+    i {
+        font-size: 1.1em;
+        padding : 0 10px;
+    }
+}

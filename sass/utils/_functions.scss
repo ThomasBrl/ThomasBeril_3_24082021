@@ -1,0 +1,10 @@
+.menu {
+    &__load {
+        animation: load $anim-dur;
+        @for $i from 1 through $num-load {
+            &--#{$i} {
+                animation: load $anim-delay * $i ease-in-out forwards;
+             }
+        }
+    }
+}

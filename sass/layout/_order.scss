@@ -1,0 +1,9 @@
+.order {
+    display: flex;
+    justify-content: center;
+    background-color: $bg-grey;
+    .btn {
+        text-align: center;
+        line-height: 50px;
+    }
+}
