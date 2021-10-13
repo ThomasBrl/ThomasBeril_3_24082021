@@ -19,12 +19,8 @@
         .fa-heart {
             margin: 12px 0 0 0;
             padding: 0;
-            &.icon--full {
+            &.fa-2x {
                 position: relative;
-                padding-top: 2px;
-
-            }
-            &.icon--empty {
                 padding: 2px 0 0 1px;
             }
         }
