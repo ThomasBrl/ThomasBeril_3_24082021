@@ -49,6 +49,41 @@
   font-weight: 500;
 }
 
+@keyframes upDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+@keyframes fade {
+  0% {
+    opacity: 1;
+    z-index: 1;
+  }
+  70% {
+    opacity: 1;
+    z-index: 1;
+  }
+  99% {
+    opacity: 0;
+    z-index: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+@keyframes load {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
 html, body, h3 {
   margin: 0;
   padding: 0;
@@ -152,7 +187,7 @@ h2 {
   height: 35px;
   position: relative;
 }
-.fa-heart.icon--empty {
+.fa-heart.fa-2x {
   font-size: 25px;
   position: absolute;
   margin: 20px 0 0 35px;
@@ -160,29 +195,20 @@ h2 {
   opacity: 1;
   transition: opacity 0.2s ease-out;
 }
-.fa-heart.icon--full {
-  font-size: 25px;
-  position: absolute;
-  display: block;
-  background-image: linear-gradient(to top right, #FF79DA, 45%, #9356DC);
-  background-clip: text;
-  color: transparent;
-  opacity: 0;
-  margin: 20px 0 0 35px;
-  padding: 2px 0 0 0;
-  transition: all 0.5s ease-in-out;
-  transform: scale(0);
-}
-.fa-heart:hover, .fa-heart:active {
+
+.fill {
+  color: black;
   cursor: pointer;
 }
-
-.menu--heart:hover .icon--full, .menu--heart:active .restaurants_card--heart:hover .icon--full, .restaurants_card--heart:active .icon--full {
-  transform: scale(1.05);
+.fill:hover {
+  animation: fill 0.3s ease-in-out;
+  display: inline-block;
   opacity: 1;
-}
-.menu--heart:hover .icon--empty, .menu--heart:active .restaurants_card--heart:hover .icon--empty, .restaurants_card--heart:active .icon--empty {
-  opacity: 0;
+  background: linear-gradient(to left, #FF79DA, 45%, #9356DC);
+  background: -webkit-linear-gradient(to left, #FF79DA, 45%, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
 }
 
 header {
@@ -269,11 +295,8 @@ footer i {
   margin: 12px 0 0 0;
   padding: 0;
 }
-.menu--title .fa-heart.icon--full {
+.menu--title .fa-heart.fa-2x {
   position: relative;
-  padding-top: 2px;
-}
-.menu--title .fa-heart.icon--empty {
   padding: 2px 0 0 1px;
 }
 .menu h1 {
