@@ -2,7 +2,7 @@
     width: 35px;
     height: 35px;
     position: relative;
-    &.icon--empty {
+    &.fa-2x {
         font-size:25px;
         position: absolute;
         margin: 20px 0 0 35px;
@@ -10,30 +10,19 @@
         opacity: 1;
         transition: opacity 0.2s ease-out;
     }
-    &.icon--full {
-        font-size: 25px;
-        position: absolute;
-        display: block;
-        background-image: linear-gradient(to top right, $color-secondary, 45%, $color-primary);
-        background-clip: text;
-        color: transparent;
-        opacity: 0;
-        margin: 20px 0 0 35px;
-        padding: 2px 0 0 0;
-        transition: all 0.5s ease-in-out;
-        transform: scale(0);
-    }
-    &:hover, &:active {
-        cursor: pointer;
-    }
 }
 
-.menu--heart:hover, .menu--heart:active .restaurants_card--heart:hover, .restaurants_card--heart:active { 
-    .icon--full {
-        transform: scale(1.05);
-        opacity: 1;
-    }
-    .icon--empty {
-        opacity: 0;
-    }
-}
+.fill {
+    color: black;
+    cursor: pointer;
+    &:hover {
+      animation: fill 0.3s ease-in-out;
+      display: inline-block;
+      opacity: 1;
+      background:linear-gradient(to left, $color-secondary, 45%, $color-primary);
+      background:-webkit-linear-gradient(to left, $color-secondary, 45%, $color-primary);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      font-weight: bold;
+   }
+ }
